@@ -1,0 +1,296 @@
+/***********
+Geral*/
+@font-face {
+  font-family: BlackOut;
+  src: url(../../Fonte/Blackout.otf); }
+@font-face {
+  font-family: Geizer;
+  src: url(../../Fonte/Geizer.otf); }
+@font-face {
+  font-family: Dejavu;
+  src: url(../../Fonte/DejaVuSans.ttf); }
+* {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff5900; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #935220; }
+
+body {
+  overflow-x: hidden;
+  background-color: #000;
+  max-width: 100%;
+  min-width: 300px;
+  color: #fff;
+  font-size: 20px;
+  font-family: Dejavu; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+/******
+Header*/
+.header {
+  background: #ff5900;
+  height: 70px;
+  color: #000;
+  font-family: Geizer; }
+
+.titulo {
+  margin-left: 15px;
+  margin-top: 15px; }
+
+nav ul li {
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease; }
+  nav ul li a {
+    padding: 20px; }
+    nav ul li a i {
+      margin-left: 5px; }
+
+.cobertura {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(157, 55, 0, 0.5);
+  transition: height 0.3s ease;
+  pointer-events: none; }
+
+nav ul li:hover .cobertura {
+  cursor: pointer;
+  height: 100%; }
+
+.frase {
+  font-family: Geizer; }
+
+/*********
+Main*/
+main {
+  margin-bottom: 50px;
+  letter-spacing: 2px; }
+  main #container {
+    margin-top: 25px; }
+  main #principal {
+    margin-top: 75px; }
+    main #principal button {
+      color: #fff;
+      background-image: url(../../Imgs/Index/parteMadeira.png);
+      border-radius: 15px;
+      border: none;
+      padding: 15px;
+      margin-bottom: 15px;
+      width: 470px;
+      height: 90px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease; }
+      main #principal button i {
+        font-size: 35px; }
+    main #principal button:hover {
+      transform: translateX(390px); }
+  main #tabua {
+    z-index: 999; }
+  main #ficha {
+    z-index: 1;
+    margin-left: -330px;
+    margin-top: 250px; }
+
+.icon {
+  margin-left: 20px; }
+
+.degrade {
+  background-image: url(../../Imgs/Index/degrade.png);
+  height: 100px; }
+
+.frase-color {
+  font-family: BlackOut;
+  color: #b30000; }
+
+#fotos img {
+  border: 7px outset #935220;
+  border-radius: 5px;
+  margin-top: 30px; }
+
+/***********
+Cardapios*/
+#carnes ul, #acompanhamentos ul, #salada ul, #bebidas ul, #doces ul {
+  margin-top: 25px; }
+  #carnes ul li, #acompanhamentos ul li, #salada ul li, #bebidas ul li, #doces ul li {
+    margin-top: 20px;
+    color: #fff;
+    background-color: #000; }
+    #carnes ul li img, #acompanhamentos ul li img, #salada ul li img, #bebidas ul li img, #doces ul li img {
+      width: 200px;
+      height: 150px;
+      border-radius: 5px; }
+
+.tituloCardapio {
+  margin-top: -100px; }
+  .tituloCardapio .tituloText {
+    font-size: 150px; }
+
+/*********
+Pedidos*/
+.inputCliente {
+  width: 450px;
+  height: 500px;
+  background-color: #282828;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px; }
+
+.input {
+  width: 400px;
+  height: 200px;
+  background-color: #282828;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 10px 15px 10px; }
+
+.select {
+  width: 100%;
+  border: 2px solid #000;
+  padding: 5px;
+  background-color: #4b4b4b;
+  color: #fff; }
+
+.pedidoLista {
+  width: 450px;
+  height: auto;
+  color: #fff;
+  padding: 15px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-bottom: 15px; }
+
+.pedidoButton {
+  width: 500px;
+  height: 150px;
+  color: #fff;
+  padding: 15px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center; }
+
+.btn-pedido {
+  width: 100%;
+  font-size: 25px; }
+
+input[type="text"] {
+  width: 100%;
+  background-color: #5a5a5a;
+  color: #fff; }
+
+#escolhidos p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#escolhidos button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; }
+
+.btnX i {
+  color: red; }
+
+/************
+Contato*/
+#contato {
+  margin-top: 100px; }
+  #contato #maps {
+    margin-top: 25px; }
+  #contato .textCenter {
+    text-align: center; }
+    #contato .textCenter .titleInfo {
+      color: #b30000; }
+
+/********
+footer*/
+footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  background-color: #ff5900;
+  color: #000;
+  font-family: Geizer; }
+  footer .button {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    color: #ff5900;
+    background: #000;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
+  footer .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px; }
+  footer .button:hover {
+    width: 200px; }
+  footer .button:nth-child(1):hover .icon {
+    background: #e1306c; }
+  footer .button:nth-child(2):hover .icon {
+    background: #4267b2; }
+  footer .button:nth-child(3):hover .icon {
+    background: #1da1f2; }
+  footer .button:nth-child(1) span {
+    color: #e1306c; }
+  footer .button:nth-child(2) span {
+    color: #4267b2; }
+  footer .button:nth-child(3) span {
+    color: #1da1f2; }
+  footer .button .icon {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    margin-left: -1px;
+    transition: all 0.3s ease-in-out; }
+  footer .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-in-out; }
+  footer .button:hover i {
+    color: #fff; }
+  footer footer:has(p) {
+    padding: 3px;
+    display: block;
+    text-align: center; }
+  footer p:first-child a {
+    color: #b30000;
+    text-decoration: underline; }
+  footer footer a:hover {
+    color: #fafaff; }
+  footer .clear {
+    clear: both; }
+
+/*# sourceMappingURL=style.css.map */

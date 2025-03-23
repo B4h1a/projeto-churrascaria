@@ -1,0 +1,371 @@
+//Necessário a instalação do nodeJs e do sass pelo terminal -- Lembrar
+
+//variaveis
+$body-background-color: #000;
+$color-text-link: #000;
+$color-text-header: #000;
+$color: #fff;
+$background-header: rgb(255, 89, 0);
+$madeira: #935220;
+$laranja: rgb(255, 89, 0);
+$vermelho-spans: #b30000;
+$header-hight: 70px;
+$font-normal: Dejavu;
+$font-header: Geizer;
+$font-diferente: BlackOut;
+
+/***********
+Geral*/
+@font-face {
+    font-family: $font-diferente;
+    src: url(../../Fonte/Blackout.otf);
+}
+@font-face {
+    font-family: $font-header;
+    src: url(../../Fonte/Geizer.otf);
+}
+@font-face {
+    font-family: $font-normal;
+    src: url(../../Fonte/DejaVuSans.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+} 
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $background-header; 
+}
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $madeira; 
+}
+body{
+    overflow-x: hidden;
+    background-color: $body-background-color;
+    max-width: 100%;
+    min-width: 300px;
+    color: $color;
+    font-size: 20px;
+    font-family: $font-normal;
+}
+a{
+    text-decoration: none;
+    color: $color-text-link;
+}
+/******
+Header*/
+.header{
+    background: $background-header;
+    height: $header-hight;
+    color: $color-text-header;
+    font-family: $font-header;
+}
+.titulo{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+nav ul li{
+    margin-right: 10px; 
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    a{
+        padding: 20px;
+        i{
+            margin-left: 5px;
+        }
+    } 
+}
+.cobertura {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(157, 55, 0, 0.5);
+    transition: height 0.3s ease;
+    pointer-events: none;
+}
+nav ul li:hover .cobertura{
+    cursor: pointer;
+    height: 100%;
+}
+.frase{
+    font-family: $font-header;
+}
+
+/*********
+Main*/
+main{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    #container{
+        margin-top: 25px;
+    }
+    #principal{
+        margin-top: 75px;
+        button{
+            color: $color;
+            background-image: url(../../Imgs/Index/parteMadeira.png) ;
+            border-radius: 15px;
+            border: none;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 470px;
+            height: 90px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            i{
+                font-size: 35px;
+            }
+        }
+        
+        button:hover {
+            transform: translateX(390px); 
+        }
+    }
+    #tabua{
+        z-index: 999;
+    }
+    #ficha{
+        z-index: 1;
+        margin-left: -330px;
+        margin-top: 250px;
+    }
+}
+
+.icon{
+    margin-left: 20px;
+}   
+.degrade{
+    background-image: url(../../Imgs/Index/degrade.png);
+    height: 100px;
+
+}
+.frase-color{
+    font-family: $font-diferente;
+    color: $vermelho-spans;
+}
+#fotos img{
+    border: 7px outset $madeira;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/***********
+Cardapios*/
+#carnes, #acompanhamentos, #salada, #bebidas, #doces{
+    ul{
+        margin-top: 25px;
+        li{
+            margin-top: 20px;
+            color: $color;
+            background-color: #000;
+            img{
+                width: 200px;
+                height: 150px;
+                border-radius: 5px;
+            }
+        }
+    }
+    
+}
+
+.tituloCardapio{
+    margin-top: -100px;
+    .tituloText{
+        font-size: 150px;
+    }
+}
+
+/*********
+Pedidos*/
+.inputCliente{
+    width: 450px;
+    height: 500px;
+    background-color: #282828;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.input{
+    width: 400px;
+    height: 200px;
+    background-color: #282828;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 10px 15px 10px;
+}
+.select{
+    width: 100%;
+    border: 2px solid #000;
+    padding: 5px;
+    background-color: #4b4b4b;
+    color: #fff;
+}
+.pedidoLista{
+    width: 450px;
+    height: auto;
+    color: #fff;
+    padding: 15px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.pedidoButton{
+    width: 500px;
+    height: 150px;
+    color: #fff;
+    padding: 15px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+.btn-pedido{
+    width: 100%;
+    font-size: 25px;
+}
+input[type="text"]{
+    width: 100%;
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+#escolhidos p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#escolhidos button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.btnX i{
+    color: red;
+}
+/************
+Contato*/
+#contato{
+    margin-top: 100px;
+    #maps{
+        margin-top: 25px;
+    }
+    .textCenter{
+        text-align: center;
+        .titleInfo{
+            color: $vermelho-spans;
+        }
+    }
+}
+/********
+footer*/
+footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+    background-color: $laranja;
+    color: #000;
+    font-family: $font-header;
+
+    .button {
+       
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        color: $laranja;
+        background: #000;
+        overflow: hidden;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .button span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+    }
+    
+    .button:hover {
+        width: 200px;
+    }
+    
+    .button:nth-child(1):hover .icon {
+        background: #e1306c;
+    }
+    
+    .button:nth-child(2):hover .icon {
+        background: #4267b2;
+    }
+    
+    .button:nth-child(3):hover .icon {
+        background: #1da1f2;
+    }
+    .button:nth-child(1) span {
+        color: #e1306c;
+    }
+    
+    .button:nth-child(2) span {
+        color: #4267b2;
+    }
+    
+    .button:nth-child(3) span {
+        color: #1da1f2;
+    }
+    .button .icon {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	border-radius: 50px;
+	display: inline-block;
+    margin-left: -1px;
+	transition: all 0.3s ease-in-out;
+    }
+
+    .button .icon i {
+    	font-size: 25px;
+    	line-height: 60px;
+    	transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover i {
+    	color: #fff;
+    }
+
+    footer:has(p) {
+    	padding: 3px;
+    	display: block;
+    	text-align: center;
+    }
+
+    p:first-child a {
+    	color: $vermelho-spans;
+    	text-decoration: underline;
+    }
+
+    footer a:hover {
+    	color: #fafaff;
+    }
+    .clear{
+        clear: both;
+    }
+}

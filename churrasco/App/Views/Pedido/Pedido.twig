@@ -1,0 +1,149 @@
+<main style="margin-top: 150px;">
+  <section class="container">
+      <section class="row">
+        <article class="col-8">
+          <section class="row">
+            <article class="col-4 input">
+              <aside>
+                <h2>Carnes</h2>
+              </aside>
+              <aside>
+                <select class="select" name="carnes" id="carneEscolha">
+                  <option value="">-- Selecione seus pratos de carne --</option>
+                  {% for carne in listaCarnes %}
+                  <option value="{{ carne.nome }}/{{ carne.preco }}">
+                    <span>{{ carne.nome }}</span> -
+                    <span>R${{ carne.preco }}</span>
+                  </option>
+                  {% endfor %}
+                </select>
+              </aside>
+            </article>
+            <article class="col-2 input">
+              <aside>
+                <h2>Adicionais</h2>
+              </aside>
+              <aside>
+                <select class="select" name="adicionais" id="adicionaisEscolha">
+                  <option value="">-- Selecione seus adicionais --</option>
+                  {% for adic in listaAdicionais %}
+                  <option value="{{ adic.nome }}/{{ adic.preco }}">
+                    <span>{{ adic.nome }}</span> -
+                    <span>R${{ adic.preco }}</span>
+                  </option>
+                  {% endfor %}
+                </select>
+              </aside>
+            </article>
+            <article class="col-2 input">
+              <aside>
+                <h2>Saladas</h2>
+              </aside>
+              <aside>
+                <select class="select" name="salada" id="saladaEscolha">
+                  <option value="">-- Selecione seus pratos de salada --</option>
+                  {% for salada in listaSalada %}
+                  <option value="{{ salada.nome }}/{{ salada.preco }}">
+                    <span>{{ salada.nome }}</span> -
+                    <span>R${{ salada.preco }}</span>
+                  </option>
+                  {% endfor %}
+                </select>
+              </aside>
+            </article>
+            <article class="col-2 input">
+              <aside>
+                <h2>Bebidas</h2>
+              </aside>
+              <aside>
+                <select class="select" name="bebidas" id="bebidasEscolha">
+                  <option value="">-- Selecione suas bebidas --</option>
+                  {% for bebidas in listaBebidas %}
+                  <option value="{{ bebidas.nome }}/{{ bebidas.preco }}">
+                    <span>{{ bebidas.nome }}</span> -
+                    <span>R${{ bebidas.preco }}</span>
+                  </option>
+                  {% endfor %}
+                </select>
+              </aside>
+            </article>
+            <article class="col-2 input">
+              <aside>
+                <h2>Sobremesas</h2>
+              </aside>
+              <aside>
+                <select class="select" name="sobremesas" id="sobremesasEscolha">
+                  <option value="">-- Selecione suas sobremesas --</option>
+                  {% for sobremesas in listaSobremesas %}
+                  <option value="{{ sobremesas.nome }}/{{ sobremesas.preco }}">
+                    <span>{{ sobremesas.nome }}</span> -
+                    <span>R${{ sobremesas.preco }}</span>
+                  </option>
+                  {% endfor %}
+                </select>
+              </aside>
+            </article>
+            
+          </section>
+        </article>
+        <article class="col-4">
+          <section class="row flex-column">
+              <article class="col-8 pedidoLista">
+                  <aside>
+                    <h2>Pedido</h2>
+                  </aside>
+                  <aside>
+                    <section>
+                      <article id="escolhidos">
+                        <aside id="carneContainer"></aside>
+                        <aside id="adicionaisContainer"></aside>
+                        <aside id="saladaContainer"></aside>
+                        <aside id="bebidasContainer"></aside>
+                        <aside id="sobremesasContainer"></aside>
+                      </article>
+                      <article>
+                        Preço: <span id="precoEscolhidos"></span>
+                      </article>
+                    </section>
+                  </aside>
+              </article>
+              <article class="col-2 inputCliente">
+                <aside>
+                  <h2>Dados para entrega</h2>
+                </aside>
+                <aside>
+                  <section>
+                    <label for="nome">Nome:</label>
+                    <input id="nome" name="nome" type="text">
+                  </section>
+                  <section>
+                    <label for="endereco">Endereço:</label>
+                    <input id="endereco" name="endereco" type="text">
+                  </section>
+                  <section>
+                    <label for="numero">Numero Da casa:</label>
+                    <input id="numero" name="numero" type="text">
+                  </section>
+                  <section>
+                    <label for="complemento">Complemento:</label>
+                    <input id="complemento" name="complemento" type="text">
+                  </section>
+                  <section>
+                    <label for="telefone">Telefone:</label>
+                    <input id="telefone" name="telefone" type="text">
+                  </section>
+                </aside>
+              </article>
+              <article class="col-2 pedidoButton">
+                <aside>
+                  <h2>Comprar</h2>
+                </aside>
+                <aside>
+                  <input type="submit" id="btnFazerPedido" value="Finalizar Compra" class="btn btn-outline-warning btn-pedido">
+                </aside>
+              </article>
+          </section>
+        </article>
+      </section>
+  </section>
+</main>
